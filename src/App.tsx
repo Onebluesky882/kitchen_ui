@@ -13,6 +13,7 @@ import FriedFoodMenu from "@/Page/SidebarMenu/FriedFoodmenu";
 import Waiter from "@/Page/Footer/Waiter";
 import Promotion from "@/Page/Footer/Promotion";
 import Cart from "./Page/Cart/intex";
+import ClipboardOrder from "./Page/ClipboardOrder";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/promotion" element={<Promotion />} />
           <Route path="/waiter" element={<Waiter />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/clipboard" element={<ClipboardOrder />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,4 +1,5 @@
-import { CartCard } from "@/Components/CartCard";
+import ClipboardCard from "@/Components/ClipboardCard";
+import { ClipboardOrder } from "@/Components/ClipboardOrder";
 import { GlobalContext } from "@/Hooks/GlobalContext";
 import { useContext } from "react";
 
@@ -6,16 +7,16 @@ const Cart = () => {
   const { cart } = useContext(GlobalContext);
 
   return (
-    <div>
+    <ClipboardCard>
       {cart.map((item) => (
-        <CartCard
+        <ClipboardOrder
           id={item.id}
           name={item.name}
           price={item.price}
           image={item.image}
         />
       ))}
-    </div>
+    </ClipboardCard>
   );
 };
 

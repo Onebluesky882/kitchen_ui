@@ -1,12 +1,13 @@
 import SidebarLeft from "../../SidebarLeft";
 import SidebarRight from "../../SidebarRight";
-import { HomeIcon, Logo, OrderList } from "./headerStyle";
+import { ClipboardOrder, HomeIcon, Logo, OrderList } from "./headerStyle";
 
 export default function Header() {
   return (
     <header className="header">
       <HomeIcon />
       <Logo />
+      <ClipboardOrder />
       <OrderList />
       <SidebarLeft />
       <SidebarRight />
