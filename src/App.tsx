@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "@/Components/Layout";
+import HomePage from "@/Page/Homepage";
+import PorkMenu from "@/Page/SidebarMenu/PorkMenu";
+import BeefMenu from "@/Page/SidebarMenu/BeefMenu";
+import SeafoodMenu from "@/Page/SidebarMenu/Seafood";
+import VegetableMenu from "@/Page/SidebarMenu/Vegetable";
+import NoodleMenu from "@/Page/SidebarMenu/NoodleMenu";
+import MeatballMenu from "@/Page/SidebarMenu/Meatball";
+import DrinkMenu from "@/Page/SidebarMenu/Drink";
+import FriedFoodMenu from "@/Page/SidebarMenu/FriedFoodmenu";
+import Waiter from "@/Page/Footer/Waiter";
+import Promotion from "@/Page/Footer/Promotion";
+import Cart from "./Page/Cart/intex";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="/pork" element={<PorkMenu />} />
+          <Route path="/beef" element={<BeefMenu />} />
+          <Route path="/seafood" element={<SeafoodMenu />} />
+          <Route path="/vegetable" element={<VegetableMenu />} />
+          <Route path="/noodle" element={<NoodleMenu />} />
+          <Route path="/meatball" element={<MeatballMenu />} />
+          <Route path="/drink" element={<DrinkMenu />} />
+          <Route path="/friedfood" element={<FriedFoodMenu />} />
+          <Route path="/promotion" element={<Promotion />} />
+          <Route path="/waiter" element={<Waiter />} />
+          <Route path="/cart" element={<Cart />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

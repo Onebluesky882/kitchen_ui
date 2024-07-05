@@ -5,4 +5,6 @@ export type MenuItem = {
   image: string;
 };
 
-export type MenuCartItem = MenuItem & { amount: number; table: number };
+// คือการประกาศ type ตัวใหม่ ดึงของเก่า แล้วเพิ่ม object ใหม่เข้าไปเพิ่ม
+
+export type MenuCartItem = MenuItem & { amount: number };
