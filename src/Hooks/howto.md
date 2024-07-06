@@ -17,31 +17,4 @@ type GlobalContextType = {
   cart: MenuCartItem[];
   setCart: React.Dispatch<React.SetStatAction<MenuCartItem[]>>;
 };
-
-export const GlobalContext = createContext<GlobalContextType>({
-  cart: [],
-  setCart: () => null,
-});
-
-const GlobalProvider = () => {
-    return (
-        <GlobalContext.Provider value= {{cart , setCart}}>
-        {children}
-        <GlobalContext.Provider>
-    );
-}
-```
-
-```tsx
-import { MenuCartItem } from "@/types/MenuItem";
-import { createContext, useState } from "react";
-
-// ส่วนที่ 2 useContext
-
-
-const MenuCard = ({ id, name, image, price }: MenuCardProps) => {
-  const { cart, setCart } = useContext(GlobalContext);
-
-  return;
-};
 ```

@@ -23,11 +23,6 @@ export const GlobalProvider = ({ children }: React.PropsWithChildren) => {
   // const [cart, setCart] = useState<MenuCartItem[]>([]);
   const mockTables = [
     {
-      cart: [],
-      status: "in-progress",
-      no: 1,
-    },
-    {
       cart: [
         {
           id: 0,
@@ -52,11 +47,60 @@ export const GlobalProvider = ({ children }: React.PropsWithChildren) => {
         },
       ],
       status: "in-progress",
+      no: 1,
+    },
+    {
+      cart: [
+        {
+          id: 1,
+          name: "เนื้อสามชั้น",
+          price: 205,
+          image: "/beef_pics/เนื้อสามชั้น.png",
+          amount: 5,
+        },
+        {
+          id: 1,
+          name: "เนื้อน่องลาย",
+          price: 205,
+          image: "/beef_pics/เนื้อน่องลาย.png",
+          amount: 1,
+        },
+        {
+          id: 2,
+          name: "เนื้อสันคอ",
+          price: 205,
+          image: "/beef_pics/สันคอเนื้อ.png",
+          amount: 5,
+        },
+      ],
+      status: "in-progress",
       no: 2,
     },
     {
-      cart: [],
-      status: "free",
+      cart: [
+        {
+          id: 2,
+          name: "เนื้อสามชั้น",
+          price: 205,
+          image: "/beef_pics/เนื้อสามชั้น.png",
+          amount: 5,
+        },
+        {
+          id: 1,
+          name: "เนื้อน่องลาย",
+          price: 205,
+          image: "/beef_pics/เนื้อน่องลาย.png",
+          amount: 1,
+        },
+        {
+          id: 2,
+          name: "เนื้อสันคอ",
+          price: 205,
+          image: "/beef_pics/สันคอเนื้อ.png",
+          amount: 5,
+        },
+      ],
+      status: "in-progress",
       no: 3,
     },
   ];
