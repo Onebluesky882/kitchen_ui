@@ -14,6 +14,7 @@ import Waiter from "@/Page/Footer/Waiter";
 import Promotion from "@/Page/Footer/Promotion";
 import Cart from "./Page/Cart/intex";
 import ClipboardOrder from "./Page/ClipboardOrder";
+import ExampleTablesPage from "./Page/ExampleTablesPage";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/waiter" element={<Waiter />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/clipboard" element={<ClipboardOrder />} />
+          <Route path="/tables" element={<ExampleTablesPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

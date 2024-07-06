@@ -4,7 +4,15 @@ import { GlobalContext } from "@/Hooks/GlobalContext";
 import { useContext } from "react";
 
 const Cart = () => {
-  const { cart } = useContext(GlobalContext);
+  // const { cart } = useContext(GlobalContext);
+  const cart = [
+    {
+      id: 123,
+      name: "name",
+      price: 100,
+      image: "./sth.png",
+    },
+  ];
 
   return (
     <ClipboardCard>
