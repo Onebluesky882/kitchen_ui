@@ -1,5 +1,3 @@
-import SidebarLeft from "../../SidebarLeft";
-import SidebarRight from "../../SidebarRight";
 import { ClipboardOrder, HomeIcon, Logo, OrderList } from "./headerStyle";
 
 export default function Header() {
