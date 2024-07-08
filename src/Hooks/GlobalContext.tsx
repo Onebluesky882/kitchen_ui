@@ -30,6 +30,7 @@ export const GlobalProvider = ({ children }: React.PropsWithChildren) => {
           price: 205,
           image: "/beef_pics/เนื้อสามชั้น.png",
           amount: 5,
+          status: "done",
         },
         {
           id: 1,
@@ -37,6 +38,7 @@ export const GlobalProvider = ({ children }: React.PropsWithChildren) => {
           price: 205,
           image: "/beef_pics/เนื้อน่องลาย.png",
           amount: 1,
+          status: "in-progress",
         },
         {
           id: 2,
@@ -44,19 +46,21 @@ export const GlobalProvider = ({ children }: React.PropsWithChildren) => {
           price: 205,
           image: "/beef_pics/สันคอเนื้อ.png",
           amount: 5,
+          status: "in-progress",
         },
       ],
-      status: "in-progress",
+      status: "complete",
       no: 1,
     },
     {
       cart: [
         {
-          id: 1,
+          id: 0,
           name: "เนื้อสามชั้น",
           price: 205,
           image: "/beef_pics/เนื้อสามชั้น.png",
           amount: 5,
+          status: "done",
         },
         {
           id: 1,
@@ -64,6 +68,7 @@ export const GlobalProvider = ({ children }: React.PropsWithChildren) => {
           price: 205,
           image: "/beef_pics/เนื้อน่องลาย.png",
           amount: 1,
+          status: "in-progress",
         },
         {
           id: 2,
@@ -71,19 +76,21 @@ export const GlobalProvider = ({ children }: React.PropsWithChildren) => {
           price: 205,
           image: "/beef_pics/สันคอเนื้อ.png",
           amount: 5,
+          status: "in-progress",
         },
       ],
-      status: "in-progress",
+      status: "complete",
       no: 2,
     },
     {
       cart: [
         {
-          id: 2,
+          id: 0,
           name: "เนื้อสามชั้น",
           price: 205,
           image: "/beef_pics/เนื้อสามชั้น.png",
           amount: 5,
+          status: "done",
         },
         {
           id: 1,
@@ -91,6 +98,7 @@ export const GlobalProvider = ({ children }: React.PropsWithChildren) => {
           price: 205,
           image: "/beef_pics/เนื้อน่องลาย.png",
           amount: 1,
+          status: "in-progress",
         },
         {
           id: 2,
@@ -98,9 +106,10 @@ export const GlobalProvider = ({ children }: React.PropsWithChildren) => {
           price: 205,
           image: "/beef_pics/สันคอเนื้อ.png",
           amount: 5,
+          status: "in-progress",
         },
       ],
-      status: "in-progress",
+      status: "complete",
       no: 3,
     },
   ];
