@@ -6,6 +6,7 @@ import Waiter from "@/Page/Footer/Waiter";
 import Promotion from "@/Page/Footer/Promotion";
 import ExampleTablesPage from "@/Page/ExampleTablesPage";
 import { TablesV2 } from "./Page/TablesV2";
+import Menu from "./Page/Menu";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
           <Route path="/waiter" element={<Waiter />} />
           <Route path="/tables" element={<ExampleTablesPage />} />
           <Route path="/tablesv2" element={<TablesV2 />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/history" element={<Menu />} />
         </Route>
       </Routes>
     </BrowserRouter>
