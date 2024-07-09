@@ -10,7 +10,7 @@ export const PageLayout = ({ children }: React.PropsWithChildren) => {
         flexWrap: "wrap",
         maxWidth: "1280px",
         margin: "0 auto",
-        backgroundColor: "#D6DAA5",
+        backgroundColor: "#FBF8EE",
 
         columnGap: "12px",
         rowGap: "10px",
@@ -26,8 +26,8 @@ export const PageLayout = ({ children }: React.PropsWithChildren) => {
 export const TableContainer = ({ children }: React.PropsWithChildren) => {
   return (
     <div
+      className="glass"
       style={{
-        backgroundColor: "white",
         border: "1px solid #d9d9d9",
         borderRadius: "10px",
         padding: "10px",
@@ -76,11 +76,11 @@ export const TableNumber = ({ no }: { no: number }) => {
 };
 export const OrderList = ({ table: { no, cart } }: { table: TableType }) => {
   const statusDone = {
-    backgroundColor: "green",
+    backgroundColor: "#19990e",
     color: "white",
   };
   const statusPanding = {
-    backgroundColor: "yellow",
+    backgroundColor: "#F6ECD2",
   };
 
   return (
@@ -106,7 +106,9 @@ export const OrderList = ({ table: { no, cart } }: { table: TableType }) => {
               ...(item.status === "done" ? statusDone : statusPanding),
             }}
           >
-            <p style={{ marginRight: "10px", fontSize: "20px" }}>{index + 1}</p>
+            <p style={{ marginRight: "10px", fontSize: "20px" }}>
+              {index + 1}.
+            </p>
             <img src={item.image} width={40} />{" "}
             <span style={{ marginLeft: "10px" }}></span>
             <p style={{ marginRight: "10px", fontSize: "22px" }}>
