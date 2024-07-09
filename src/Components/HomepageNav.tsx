@@ -43,7 +43,7 @@ const HomepageNav = () => {
       >
         เมนูระบบ
       </h1>
-      <div style={{}}>
+      <div>
         <Button name="ออเดอร์" url="tablesv2" key={"tablesv2"} />
         <Button name="เมนูอาหาร" url="menu" key={"menu"} />
         <Button name="เรียกเด็กเสิร์ฟ" url="menu" key={"menu"} />
