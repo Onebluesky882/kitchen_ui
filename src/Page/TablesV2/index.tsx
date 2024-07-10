@@ -3,10 +3,10 @@ import { GlobalContext } from "@/Hooks/GlobalContext";
 import { useContext } from "react";
 
 export const TablesV2 = () => {
-  const { tables } = useContext(GlobalContext);
+  const { table } = useContext(GlobalContext);
   return (
     <PageLayout>
-      {tables.map((cart) => (
+      {table.map((cart) => (
         <TableContainer>
           <OrderList key={cart.no} table={cart} />
         </TableContainer>

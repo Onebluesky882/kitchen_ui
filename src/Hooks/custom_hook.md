@@ -7,7 +7,7 @@
  // return ตัวแปร
   return { cart, setCart, onAdd };
 
-2. สร้างตัวแปรเก็บ object
+2. สร้างตัวแปรเก็บ object type
 export const defaultCartProvider = {
   cart: [],
   setCart: () => null,

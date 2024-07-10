@@ -31,6 +31,9 @@ export const TableContainer = ({ children }: React.PropsWithChildren) => {
         border: "1px solid #d9d9d9",
         borderRadius: "10px",
         padding: "10px",
+        position: "relative",
+        display: "flex",
+        paddingBottom: "120px",
       }}
     >
       {children}
@@ -78,6 +81,8 @@ export const OrderList = ({ table: { no, cart } }: { table: TableType }) => {
   const statusDone = {
     backgroundColor: "#19990e",
     color: "white",
+    position: "absolute",
+    bottom: "10px",
   };
   const statusPanding = {
     backgroundColor: "#F6ECD2",

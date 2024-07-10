@@ -1,7 +1,6 @@
 import { MenuCartItem, MenuItem } from "@/types/MenuItem";
 import { useState } from "react";
 
-// ตั้งชื่อนำหน้าด้วย use กฏของ react hook
 export const useCart = () => {
   const [cart, setCart] = useState<MenuCartItem[]>([]);
 
@@ -34,13 +33,36 @@ export const useCart = () => {
     setCart(newCart);
   };
 
-  // return ตัวแปร
-  return { cart, setCart, onAdd };
+  const onMinus = ({ name }: Pick<MenuItem, "name">) => {
+    const menuItem = cart.find((item) => item.name === name);
+    const amount = menuItem?.amount ?? 0;
+    if (amount === 0) {
+      return;
+    }
+
+    const newCart = [...cart];
+    const cartItemIndex = newCart.findIndex((item) => item.name === name);
+    const cartItemExist = cartItemIndex !== -1;
+
+    if (cartItemExist) {
+      // Decrease amount
+      newCart[cartItemIndex].amount--;
+
+      // Remove item if amount reaches zero
+      if (newCart[cartItemIndex].amount === 0) {
+        newCart.splice(cartItemIndex, 1);
+      }
+
+      setCart(newCart);
+    }
+  };
+
+  return { cart, setCart, onAdd, onMinus };
 };
 
-// export ออกในรูปแบบ objects type
 export const defaultCartProvider = {
   cart: [],
   setCart: () => null,
   onAdd: () => null,
+  onMinus: () => null,
 };
