@@ -1,0 +1,5 @@
+{
+  "watch": ["core/src/database"],
+  "ext": ".ts,.js",
+  "exec": "ts-node ./core/src/"
+}

@@ -1,8 +1,8 @@
-import { mockTables } from "@/Data/mockTable";
 import { MenuCartItem } from "@/types/MenuItem";
 import { createContext } from "react";
+import { mockTables } from "../Database/mockTable";
 
-type TableType = {
+export type TableType = {
   cart: MenuCartItem[];
   no: number;
   status: string;
